@@ -1,10 +1,14 @@
 <template>
   <div>
-    <NuxtWelcome />
-    <p>{{data}}</p>
+    <p>{{ data }}</p>
+    <button @click="getData">CLICK</button>
   </div>
 </template>
 <script setup>
-const { data } = await useFetch('/api/count');
-console.log(data.value);
+const data = ref();
+const getData = async () => {
+  const { data: response } = await useFetch("/api/count");
+  console.log(data.value);
+  data.value = response;
+};
 </script>
