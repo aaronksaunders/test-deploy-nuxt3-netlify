@@ -1,6 +1,7 @@
 <template>
   <div>
     <NuxtWelcome />
+    <p>{{data}}</p>
   </div>
 </template>
 <script setup>

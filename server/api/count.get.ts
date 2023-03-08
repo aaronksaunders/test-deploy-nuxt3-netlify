@@ -1,6 +1,6 @@
 export default defineEventHandler((event) => {
     return {
-      api: 'works',
+      api: 'works ' + new Date(),
     };
   });
   
